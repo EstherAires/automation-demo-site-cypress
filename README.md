@@ -4,7 +4,7 @@
 Automação de testes para o formulário de registro disponível no site [Demo Automation Testing](https://demo.automationtesting.in/Register.html).  
 
 ## 📌 Objetivo  
-O objetivo deste projeto é validar o correto funcionamento do formulário de **registro de usuários**, cobrindo cenários positivos e negativos, utilizando o framework de testes **Cypress**.  
+O objetivo deste projeto é validar o correto funcionamento do formulário de **registro de usuários**
 
 ---
 
