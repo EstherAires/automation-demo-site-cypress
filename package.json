@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/EstherAires/automation-demo-site-cypress#readme",
   "devDependencies": {
-    "cypress": "^15.1.0"
+    "@faker-js/faker": "^10.0.0",
+    "cypress": "^15.1.0",
+    "cypress-if": "^1.13.2"
   }
 }

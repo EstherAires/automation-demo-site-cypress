@@ -1,0 +1,15 @@
+{
+  "firstName": {
+    "fillFirstName": "true",
+    "noFirstName": "false"
+  },
+
+  "lastName": {
+    "fillLastName": "true",
+    "noLastName": "false"
+  },
+  "address": {
+    "fillAddress": "true",
+    "noAddress": "false"
+  }
+}
