@@ -3,7 +3,6 @@
     "fillFirstName": "true",
     "noFirstName": "false"
   },
-
   "lastName": {
     "fillLastName": "true",
     "noLastName": "false"
@@ -11,5 +10,27 @@
   "address": {
     "fillAddress": "true",
     "noAddress": "false"
+  },
+  "phone": {
+    "fillPhone": true,
+    "noPhone": false
+  },
+  "email": {
+    "fillEmail": true,
+    "noEmail": false
+  },
+  "gender": {
+    "male": "male",
+    "female": "female",
+    "noGender": false
+  },
+  "hobbies": {
+    "selectHobbie": {
+      "addHobbie": true,
+      "cricket": true,
+      "movies": true,
+      "hockye": true
+    },
+    "noHobbie": false
   }
 }

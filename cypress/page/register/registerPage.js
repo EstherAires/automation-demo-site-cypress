@@ -33,14 +33,80 @@ class register {
   }
 
   fillAdress(adress) {
-    cy.get(registerSelectors.adress).if("exist").then((field) => {
+    cy.get(registerSelectors.address)
+      .if("exist")
+      .then((field) => {
         if (adress) {
-            const generatedAdredd = dataGenerator.generateAdress();
-            cy.wrap(field).type(generatedAdredd);
+          const generatedAddress = dataGenerator.generateAddress();
+          cy.wrap(field).type(generatedAddress);
         }
-    }).else().then(() => {
+      })
+      .else()
+      .then(() => {
         throw new Error("Adress field not found");
-    })
+      });
+  }
+
+  fillEmail(email) {
+    cy.get(registerSelectors.emailAdress)
+      .if("exist")
+      .then((field) => {
+        if (email) {
+          const generatedEmail = dataGenerator.generateEmailAddress();
+          cy.wrap(field).type(generatedEmail);
+        }
+      })
+      .else()
+      .then(() => {
+        throw new Error("Email address field not found");
+      });
+  }
+
+  fillPhone(phone) {
+    cy.get(registerSelectors.phone)
+      .if("exist")
+      .then((field) => {
+        if (phone) {
+          const generatedPhone = dataGenerator.generatePhone();
+          cy.wrap(field).type(generatedPhone);
+        }
+      })
+      .else()
+      .then(() => {
+        throw new Error("Email address field not found");
+      });
+  }
+
+  selectGender(gender) {
+    switch (gender) {
+      case "male":
+        cy.get(registerSelectors.maleGender).check().should("be.checked");
+        break;
+
+      case "female":
+        cy.get(registerSelectors.femaleGender).check().should("be.checked");
+        break;
+
+      default:
+        cy.log("No gender informed, skipping selection");
+        break;
+    }
+  }
+
+  selectHobbie(hobbie, cricket = false, movies = false, hockey = false) {
+    if (hobbie) {
+      if (cricket) {
+        cy.get(registerSelectors.cricketHobbie).check().should("be.checked");
+      }
+      if (movies) {
+        cy.get(registerSelectors.moviestHobbie).check().should("be.checked");
+      }
+      if (hockey) {
+        cy.get(registerSelectors.hockeyHobbie).check().should("be.checked");
+      }
+    } else {
+      cy.log("No hobbie informed, skipping selection");
+    }
   }
 }
 export default new register();
